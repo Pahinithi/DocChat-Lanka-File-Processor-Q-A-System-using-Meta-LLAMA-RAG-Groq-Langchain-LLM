@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Processor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to right, #ed7b7f, #7b90ed, #c77bed);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 5px solid #ffffff;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .container {
+            flex: 1;
+            margin-top: -50px;
+        }
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+            color: #333;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.75rem;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #0056b3;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            padding: 15px;
+            background-color: #f1f1f1;
+            color: #6c757d;
+            text-align: center;
+            font-size: 1.1em;
+            border-top: 2px solid #e9ecef;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+        }
+        .result pre {
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .description h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">File Processor</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/history">History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to DocChat Lanka</h1>
+        <p>Streamlining Your File Processing with Smart, In-Depth Analysis.</p>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        Upload Your File
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="/process" enctype="multipart/form-data">
+                            <div class="mb-4">
+                                <input type="file" class="form-control" name="file" required>
+                            </div>
+                            <button type="submit" class="btn btn-submit w-100">Process File</button>
+                        </form>
+                        {% if result %}
+                        <div class="result mt-4">
+                            <h3>Prediction Output:</h3>
+                            {{ result|safe }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Designed with ❤️ by Nithilan</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
