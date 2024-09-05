@@ -18,6 +18,7 @@
 - [Example Queries](#example-queries)
 - [Project Structure](#project-structure)
 - [Future Enhancements](#future-enhancements)
+- [Screenshot](#Screenshot)
 - [License](#license)
 - [Credits](#credits)
 
@@ -176,7 +177,16 @@ DocChat-Lanka/
 
 ---
 
+## Screenshot
 
+<img width="1728" alt="LLM06" src="https://github.com/user-attachments/assets/d652511f-9180-4461-abe4-0a3c1c3dc727">
+
+
+<img width="1728" alt="LLM06" src="https://github.com/user-attachments/assets/755e14fe-3c5c-4bf0-8655-f3bab89f10cf">
+
+Demo:["https://drive.google.com/file/d/1tmUCz7K7y6rKIDPT-ZIXCpdHoaMdb-tJ/view?usp=sharing"]
+
+---
 
 ## License
 
