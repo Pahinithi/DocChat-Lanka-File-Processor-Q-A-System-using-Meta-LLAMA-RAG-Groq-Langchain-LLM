@@ -184,7 +184,11 @@ DocChat-Lanka/
 
 <img width="1728" alt="LLM06" src="https://github.com/user-attachments/assets/755e14fe-3c5c-4bf0-8655-f3bab89f10cf">
 
-Demo:(["https://drive.google.com/file/d/1tmUCz7K7y6rKIDPT-ZIXCpdHoaMdb-tJ/view?usp=sharing"])
+---
+
+## Demo
+
+[Click here to see the demo](https://drive.google.com/file/d/1tmUCz7K7y6rKIDPT-ZIXCpdHoaMdb-tJ/view?usp=sharing)  
 
 ---
 
