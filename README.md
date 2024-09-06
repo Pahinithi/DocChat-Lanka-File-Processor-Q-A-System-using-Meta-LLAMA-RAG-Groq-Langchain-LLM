@@ -24,6 +24,7 @@
 
 ---
 
+
 ## Project Overview
 
 DocChat Lanka allows users to upload documents (PDFs), and using advanced AI-based models like Meta LLAMA 3.1 and Groq hardware acceleration, it processes these documents into manageable text chunks. You can then query the content of these documents in natural language, and the system will provide responses that are contextually based on the document content. All queries and answers are stored and made accessible via a history feature.
